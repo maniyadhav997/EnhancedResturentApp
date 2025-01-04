@@ -1,62 +1,94 @@
+/* index.css */
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
 .login-bg {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ff6f61, #ff9a8b);
 }
 
 .login-form {
-  display: flex;
-  flex-direction: column;
-  padding: 25px;
-  border-radius: 12px;
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  width: 100%;
 }
 
 .login-heading {
-  font-family: 'Roboto';
-  font-weight: 600;
-  font-size: 28px;
-  color: #1f1f1f;
-  margin-bottom: 5px;
-  margin-top: 0px;
-  text-transform: uppercase;
-  align-self: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff6f61;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
-.login-form label {
-  font-family: 'Roboto';
-  font-weight: 500;
+label {
+  display: block;
+  margin-bottom: 8px;
   font-size: 14px;
-  color: #808080;
-  margin-bottom: 5px;
+  color: #555;
+  font-weight: bold;
 }
 
-.login-form input {
-  min-width: 320px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 16px;
-  color: #141414;
+input {
+  width: 100%;
+  padding: 10px 12px;
   margin-bottom: 15px;
-  padding: 8px 16px;
-  border: 1px solid #808080;
+  border: 1px solid #ccc;
   border-radius: 4px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #ff6f61;
+  outline: none;
 }
 
 .login-button {
-  padding: 8px 16px;
+  width: 100%;
+  padding: 12px;
+  background-color: #ff6f61;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
   border: none;
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 14px;
-  color: #1f1f1f;
   border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .login-button:hover {
-  background-color: #80808070;
+  background-color: #e65a50;
+}
+
+.text-danger {
+  color: #ff0000;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .login-form {
+    padding: 20px 30px;
+  }
+
+  .login-heading {
+    font-size: 20px;
+  }
 }

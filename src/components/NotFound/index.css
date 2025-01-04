@@ -1,31 +1,61 @@
+/* index.css */
+
+/* Not Found Container */
 .not-found-container {
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  background-color: #f8f9fa;
+  padding: 20px;
 }
 
+/* Not Found Image */
 .not-found-image {
-  width: 220px;
+  width: 300px;
+  height: auto;
+  margin-bottom: 20px;
 }
 
+/* Heading */
 .not-found-container h1 {
-  font-family: 'Roboto';
-  font-size: 35px;
-  font-weight: 600;
-  color: #232323;
-  margin: 24px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #343a40;
+  margin-bottom: 20px;
 }
 
+/* Go Home Button */
 .not-found-container button {
-  padding: 8px 16px;
-  border: none;
-  outline: none;
-  border-radius: 4px;
-  background-color: #007bff;
+  font-size: 16px;
+  font-weight: bold;
   color: #fff;
-  font-family: 'Roboto';
-  font-size: 14px;
-  font-weight: 500;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.not-found-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .not-found-image {
+    width: 200px;
+  }
+
+  .not-found-container h1 {
+    font-size: 24px;
+  }
+
+  .not-found-container button {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
 }

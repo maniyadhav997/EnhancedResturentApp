@@ -1,41 +1,105 @@
+/* index.css */
+
+/* General Styling for Cart Page */
 .cart-page-container {
   min-height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .cart-body-container {
-  flex: 1;
+  flex-grow: 1;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
 }
 
+/* Empty Cart View */
 .empty-view-image {
-  width: 80%;
-  max-width: 450px;
-  margin-bottom: 25px;
+  width: 300px;
+  height: auto;
+  margin-bottom: 16px;
 }
 
 .empty-description {
   font-size: 18px;
-  font-weight: 500;
-  font-family: 'Roboto';
+  color: #666;
+  text-align: center;
 }
 
+/* Cart Items Header */
 .cart-items-header {
-  padding: 25px 0;
-  width: 80%;
-  margin: 0 auto;
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
 }
 
 .cart-items-header h1 {
-  font-size: 25px;
-  font-family: 'Roboto';
-  font-weight: 500;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
 }
 
 .remove-all-btn {
-  font-size: 14px;
-  font-family: 'Roboto';
-  font-weight: 500;
-  padding: 8px 16px;
   background-color: transparent;
   border: none;
-  outline: none;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #ff6f61;
+  transition: color 0.3s ease;
+}
+
+.remove-all-btn:hover {
+  color: #e65a50;
+}
+
+/* Cart Items List */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 12px;
+  background-color: #fdfdfd;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: box-shadow 0.3s ease;
+}
+
+ul li:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cart-body-container {
+    padding: 16px;
+    margin: 16px auto;
+  }
+
+  .cart-items-header h1 {
+    font-size: 20px;
+  }
+
+  .remove-all-btn {
+    font-size: 12px;
+  }
+
+  ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

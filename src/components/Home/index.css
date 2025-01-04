@@ -1,46 +1,92 @@
-.spinner-container {
-  height: 100vh;
-  display: grid;
-  place-items: center;
+/* index.css */
+
+/* General Reset */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.home-background {
+  padding: 20px;
+  background-color: #ffffff;
+  min-height: 100vh;
 }
 
 .tab-container {
-  overflow-y: auto;
-  box-shadow: 0px 10px 10px -15px #111;
-  /* -ms-overflow-style: none;
-  scrollbar-width: none;*/
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #e0e0e0;
+  overflow-x: auto;
 }
-/* .tab-container::-webkit-scrollbar {
-  display: none;
-} */
 
 .each-tab-item {
-  list-style-type: none;
-  flex-shrink: 0;
-  flex-grow: 1;
-  padding: 15px 0px;
-  text-align: center;
-  cursor: pointer;
-}
-
-.active-tab-item {
-  color: #ff6347;
-  border-bottom: 2px solid #ff6347;
-  font-weight: 600;
+  list-style: none;
+  margin-right: 10px;
 }
 
 .tab-category-button {
-  color: inherit;
-  font-family: 'Roboto';
-  font-weight: 500;
-  font-size: 18px;
-  padding: 0;
-  border: none;
-  background-color: transparent;
-  color: black;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-category-button:hover {
+  background-color: #f0f0f0;
+}
+
+.active-tab-item .tab-category-button {
+  background-color: #ff6f61;
+  color: #ffffff;
+  border-color: #ff6f61;
 }
 
 .dishes-list-container {
-  list-style-type: none;
-  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 0;
+}
+
+.spinner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+  border: 0.4rem solid #e0e0e0;
+  border-top-color: #ff6f61;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .tab-container {
+    flex-wrap: wrap;
+  }
+
+  .tab-category-button {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
 }
